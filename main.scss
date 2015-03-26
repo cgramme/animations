@@ -10,6 +10,7 @@ body {
 }
 
 @mixin rotateAnimation ($params) {
+
     -webkit-animation: $params;
     -moz-animation: $params;
     -ms-animation: $params;
@@ -23,13 +24,17 @@ body {
   background: radial-gradient($params);
 }
 @-webkit-keyframes rocket {
-  from{ background-position: 0 0}
-  to{ background-position: -160px 0}
+  from{opacity: 1;
+   background-position: 0 0;}
+  to{opacity: 1;
+   background-position: -160px 0;}
 }
 
 @keyframes rocket {
-  from{ background-position: 0 0}
-  to{ background-position: -160px 0}
+  from{opacity: 1;
+   background-position: 0 0;}
+  to{opacity: 1;
+   background-position: -160px 0;}
 }
 
 
@@ -42,7 +47,7 @@ body {
     width: 150px;
     margin-top: -75px; 
     margin-left: -75px;
-    @include planetGradient(circle, #ffff00 50%, #FF8400 70%);
+    @include planetGradient(circle, #ffff00 40%, #FF8400 70%);
     box-shadow: 0 0 200px #ff0, 0 0 30px #ff9500;
     overflow: visible;
 }
@@ -105,15 +110,15 @@ body {
     @include rotateAnimation(spin-right 10s linear infinite);
      #planet {
         position: absolute;
-        top: 0;
-        left: 50%;
+        top: 50%;
+        left: 0;
         @include planetGradient(circle, #004FCF 60%, #8A5A00 65%, #129900 67%);
         border-radius: 50%;
         height: 40px;
         width: 40px;
         margin-left: -20px;
         margin-top: -20px;
-        box-shadow: 0 0 20px #fff, inset 0px 50px 50px -40px #000;
+        box-shadow: 0 0 20px #fff, inset 50px 0px 50px -35px #000;
 
         .moon-orbit {
             position: relative;
@@ -295,17 +300,17 @@ body {
     margin-top: -180px;
     margin-left: -860px;
     border-radius: 50%;
-    @include rotateAnimation(spin-right 17s linear infinite);
+    @include rotateAnimation(spin-right 17s linear 2s infinite);
      #rocket-icon {
+        opacity: 0;
         position: absolute;
         top: -20px;
         left: 55%;
         margin-left: -10px;
         margin-top: -2px;
         transform: rotate(90deg);
-        position: absolute;
         background: url('images/rocket2.png');
-        -webkit-animation: rocket 1s steps(8) infinite;
+        -webkit-animation: rocket 1s steps(8) infinite 2s;
         animation: rocket 1s steps(8) infinite;
         margin-right: 50px;
         width: 20px;
