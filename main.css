@@ -23,10 +23,10 @@ body {
   top: 50%;
   left: 50%;
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  margin-top: -25px;
-  margin-left: -25px;
+  height: 150px;
+  width: 150px;
+  margin-top: -75px;
+  margin-left: -75px;
   background: -webkit-radial-gradient(circle, #ffff00 50%, #FF8400 70%);
   background: -o-radial-gradient(circle, #ffff00 50%, #FF8400 70%);
   background: -moz-radial-gradient(circle, #ffff00 50%, #FF8400 70%);
@@ -37,10 +37,10 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100px;
-  height: 100px;
-  margin-top: -50px;
-  margin-left: -50px;
+  width: 200px;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
   border-radius: 50%;
   -webkit-animation: spin-right 5s linear infinite;
   -moz-animation: spin-right 5s linear infinite;
@@ -59,16 +59,17 @@ body {
     height: 20px;
     width: 20px;
     margin-left: -10px;
-    margin-top: -10px; }
+    margin-top: -10px;
+    box-shadow: inset 0 -20px 20px -10px #000; }
 
 #venus-orbit {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 160px;
-  height: 160px;
-  margin-top: -80px;
-  margin-left: -80px;
+  width: 250px;
+  height: 250px;
+  margin-top: -125px;
+  margin-left: -125px;
   border-radius: 50%;
   -webkit-animation: spin-right 8s linear infinite;
   -moz-animation: spin-right 8s linear infinite;
@@ -88,16 +89,16 @@ body {
     width: 25px;
     margin-left: -12.5px;
     margin-top: -12.5px;
-    box-shadow: 0 0 10px #fff; }
+    box-shadow: 0 0 10px #fff, inset -30px 0px 30px -20px #000; }
 
 #earth-orbit {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 250px;
-  height: 250px;
-  margin-top: -125px;
-  margin-left: -125px;
+  width: 340px;
+  height: 340px;
+  margin-top: -170px;
+  margin-left: -170px;
   border-radius: 50%;
   -webkit-animation: spin-right 10s linear infinite;
   -moz-animation: spin-right 10s linear infinite;
@@ -117,7 +118,7 @@ body {
     width: 40px;
     margin-left: -20px;
     margin-top: -20px;
-    box-shadow: 0 0 20px #fff; }
+    box-shadow: 0 0 20px #fff, inset 0px 50px 50px -40px #000; }
     #earth-orbit #planet .moon-orbit {
       position: relative;
       top: 50%;
@@ -136,10 +137,10 @@ body {
         position: relative;
         top: 0;
         left: 50%;
-        background: -webkit-radial-gradient(circle, #999 60%, #333 65%);
-        background: -o-radial-gradient(circle, #999 60%, #333 65%);
-        background: -moz-radial-gradient(circle, #999 60%, #333 65%);
-        background: radial-gradient(circle, #999 60%, #333 65%);
+        background: -webkit-radial-gradient(circle, #444 60%, #222 65%);
+        background: -o-radial-gradient(circle, #444 60%, #222 65%);
+        background: -moz-radial-gradient(circle, #444 60%, #222 65%);
+        background: radial-gradient(circle, #444 60%, #222 65%);
         border-radius: 50%;
         height: 15px;
         width: 15px;
@@ -150,10 +151,10 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 350px;
-  height: 350px;
-  margin-top: -175px;
-  margin-left: -175px;
+  width: 450px;
+  height: 450px;
+  margin-top: -225px;
+  margin-left: -225px;
   border-radius: 50%;
   -webkit-animation: spin-right 12s linear infinite;
   -moz-animation: spin-right 12s linear infinite;
@@ -173,16 +174,16 @@ body {
     width: 30px;
     margin-left: -15px;
     margin-top: -15px;
-    box-shadow: 0 0 10px #fff; }
+    box-shadow: 0 0 10px #fff, inset 50px 0px 50px -40px #000; }
 
 #jupiter-orbit {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 500px;
-  height: 500px;
-  margin-top: -250px;
-  margin-left: -250px;
+  width: 600px;
+  height: 600px;
+  margin-top: -300px;
+  margin-left: -300px;
   border-radius: 50%;
   -webkit-animation: spin-right 20s linear infinite;
   -moz-animation: spin-right 20s linear infinite;
@@ -202,7 +203,7 @@ body {
     width: 70px;
     margin-left: -35px;
     margin-top: -35px;
-    box-shadow: 0 0 30px #fff; }
+    box-shadow: 0 0 30px #fff, inset 0px -60px 60px -30px #000; }
     #jupiter-orbit #planet .moon-orbit {
       position: relative;
       top: 50%;
@@ -221,10 +222,10 @@ body {
         position: relative;
         top: 0;
         left: 50%;
-        background: -webkit-radial-gradient(circle, #333 60%, #999 65%);
-        background: -o-radial-gradient(circle, #333 60%, #999 65%);
-        background: -moz-radial-gradient(circle, #333 60%, #999 65%);
-        background: radial-gradient(circle, #333 60%, #999 65%);
+        background: -webkit-radial-gradient(circle, #333 60%, #111 65%);
+        background: -o-radial-gradient(circle, #333 60%, #111 65%);
+        background: -moz-radial-gradient(circle, #333 60%, #111 65%);
+        background: radial-gradient(circle, #333 60%, #111 65%);
         border-radius: 50%;
         height: 20px;
         width: 20px;
@@ -235,10 +236,10 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 650px;
-  height: 650px;
-  margin-top: -325px;
-  margin-left: -325px;
+  width: 750px;
+  height: 750px;
+  margin-top: -375px;
+  margin-left: -375px;
   border-radius: 50%;
   -webkit-animation: spin-right 25s linear infinite;
   -moz-animation: spin-right 25s linear infinite;
@@ -257,16 +258,17 @@ body {
     height: 80px;
     width: 80px;
     margin-left: -40px;
-    margin-top: -40px; }
+    margin-top: -40px;
+    box-shadow: inset 0px 50px 50px -30px #000; }
 
 #uranus-orbit {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 800px;
-  height: 800px;
-  margin-top: -400px;
-  margin-left: -400px;
+  width: 850px;
+  height: 850px;
+  margin-top: -425px;
+  margin-left: -425px;
   border-radius: 50%;
   -webkit-animation: spin-right 40s linear infinite;
   -moz-animation: spin-right 40s linear infinite;
@@ -286,16 +288,16 @@ body {
     width: 50px;
     margin-left: -25px;
     margin-top: -25px;
-    box-shadow: 0 0 20px #fff; }
+    box-shadow: 0 0 20px #fff, inset 0px 50px 50px -30px #000; }
 
 #neptune-orbit {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 1000px;
-  height: 1000px;
-  margin-top: -500px;
-  margin-left: -500px;
+  width: 1100px;
+  height: 1100px;
+  margin-top: -550px;
+  margin-left: -550px;
   border-radius: 50%;
   -webkit-animation: spin-right 70s linear infinite;
   -moz-animation: spin-right 70s linear infinite;
@@ -315,16 +317,16 @@ body {
     width: 50px;
     margin-left: -25px;
     margin-top: -25px;
-    box-shadow: 0 0 30px #fff; }
+    box-shadow: 0 0 30px #fff, inset 0px 50px 50px -30px #000; }
 
 #rocket-orbit {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 500px;
-  height: 500px;
-  margin-top: -150px;
-  margin-left: -250px;
+  width: 1500px;
+  height: 1500px;
+  margin-top: -180px;
+  margin-left: -860px;
   border-radius: 50%;
   -webkit-animation: spin-right 17s linear infinite;
   -moz-animation: spin-right 17s linear infinite;
@@ -333,7 +335,7 @@ body {
   animation: spin-right 17s linear infinite; }
   #rocket-orbit #rocket-icon {
     position: absolute;
-    top: 0;
+    top: -20px;
     left: 55%;
     margin-left: -10px;
     margin-top: -2px;
