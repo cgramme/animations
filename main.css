@@ -31,11 +31,11 @@ body {
   width: 150px;
   margin-top: -75px;
   margin-left: -75px;
-  background: -webkit-radial-gradient(circle, #ffff00 40%, #FF8400 70%);
-  background: -o-radial-gradient(circle, #ffff00 40%, #FF8400 70%);
-  background: -moz-radial-gradient(circle, #ffff00 40%, #FF8400 70%);
-  background: radial-gradient(circle, #ffff00 40%, #FF8400 70%);
-  box-shadow: 0 0 200px #ff0, 0 0 30px #ff9500;
+  background: -webkit-radial-gradient(circle, #FFFEB3 20%, #FFFC38 50%, #FFCE47 70%);
+  background: -o-radial-gradient(circle, #FFFEB3 20%, #FFFC38 50%, #FFCE47 70%);
+  background: -moz-radial-gradient(circle, #FFFEB3 20%, #FFFC38 50%, #FFCE47 70%);
+  background: radial-gradient(circle, #FFFEB3 20%, #FFFC38 50%, #FFCE47 70%);
+  box-shadow: 0 0 200px 10px #ff0, 0 0 50px 10px #ff9500;
   overflow: visible; }
 
 #mercury-orbit {
@@ -65,7 +65,7 @@ body {
     width: 20px;
     margin-left: -10px;
     margin-top: -10px;
-    box-shadow: inset 0 -20px 20px -10px #000; }
+    box-shadow: inset 0 -20px 20px -10px #000, inset 0 10px 10px -5px #f00; }
 
 #venus-orbit {
   position: absolute;
@@ -94,7 +94,7 @@ body {
     width: 25px;
     margin-left: -12.5px;
     margin-top: -12.5px;
-    box-shadow: 0 0 10px #fff, inset -30px 0px 30px -20px #000; }
+    box-shadow: 0 0 10px #fff, inset -30px 0px 30px -20px #000, inset 20px 0px 20px -10px #FF6A00; }
 
 #earth-orbit {
   position: absolute;
@@ -123,15 +123,15 @@ body {
     width: 40px;
     margin-left: -20px;
     margin-top: -20px;
-    box-shadow: 0 0 20px #fff, inset 50px 0px 50px -35px #000; }
+    box-shadow: 0 0 20px #fff, inset 50px 0px 50px -35px #000, inset -50px 0px 50px -50px #96F8FF; }
     #earth-orbit #planet .moon-orbit {
       position: relative;
       top: 50%;
       left: 50%;
-      width: 70px;
-      height: 70px;
-      margin-top: -35px;
-      margin-left: -35px;
+      width: 78px;
+      height: 78px;
+      margin-top: -37px;
+      margin-left: -37px;
       border-radius: 50%;
       -webkit-animation: spin-right 5s linear infinite;
       -moz-animation: spin-right 5s linear infinite;
@@ -179,7 +179,7 @@ body {
     width: 30px;
     margin-left: -15px;
     margin-top: -15px;
-    box-shadow: 0 0 10px #fff, inset 50px 0px 50px -40px #000; }
+    box-shadow: 0 0 10px #fff, inset 50px 0px 50px -40px #000, inset -30px 0px 30px -20px #FFBC5E; }
 
 #jupiter-orbit {
   position: absolute;
@@ -208,7 +208,7 @@ body {
     width: 70px;
     margin-left: -35px;
     margin-top: -35px;
-    box-shadow: 0 0 30px #fff, inset 0px -60px 60px -30px #000; }
+    box-shadow: 0 0 30px #fff, inset 0px -60px 60px -30px #000, inset 0px 40px 40px -30px #FFD4B5; }
     #jupiter-orbit #planet .moon-orbit {
       position: relative;
       top: 50%;
@@ -293,7 +293,7 @@ body {
     width: 50px;
     margin-left: -25px;
     margin-top: -25px;
-    box-shadow: 0 0 20px #fff, inset 0px 50px 50px -30px #000; }
+    box-shadow: 0 0 20px #fff, inset 0px 50px 50px -30px #000, inset 0 -50px 50px -30px #96FFF5; }
 
 #neptune-orbit {
   position: absolute;
@@ -322,7 +322,7 @@ body {
     width: 50px;
     margin-left: -25px;
     margin-top: -25px;
-    box-shadow: 0 0 30px #fff, inset 0px 50px 50px -30px #000; }
+    box-shadow: 0 0 30px #fff, inset 0px 50px 50px -30px #000, inset 0 -50px 50px -30px #96B8FF; }
 
 #rocket-orbit {
   position: absolute;
@@ -380,7 +380,7 @@ body {
     width: 10px;
     margin-left: -7.5px;
     margin-top: -7.5px;
-    box-shadow: 0 0 20px #fff; }
+    box-shadow: 0 0 20px 0 #7DA6FF, -10px 0 15px 0px #7DA6FF, -20px 0 13px 0px rgba(250, 250, 250, 0.5), -30px 0 10px 0px rgba(250, 250, 250, 0.4), -40px 0 5px 0px rgba(250, 250, 250, 0.3), -55px 0 3px 0px rgba(250, 250, 250, 0.3); }
 
 #comet2-orbit {
   position: absolute;
@@ -409,7 +409,7 @@ body {
     width: 8px;
     margin-left: -7.5px;
     margin-top: -7.5px;
-    box-shadow: 0 0 20px #f00; }
+    box-shadow: 0 0 20px #f00, 0px 0px 15px 0px rgba(250, 250, 250, 0.8), -10px 0px 8px 0px rgba(250, 250, 250, 0.5), -20px 0px 5px 0px rgba(250, 250, 250, 0.3); }
 
 @-webkit-keyframes spin-right {
   100% {
