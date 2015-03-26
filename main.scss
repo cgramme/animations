@@ -44,6 +44,7 @@ body {
     margin-left: -75px;
     @include planetGradient(circle, #ffff00 50%, #FF8400 70%);
     box-shadow: 0 0 200px #ff0, 0 0 30px #ff9500;
+    overflow: visible;
 }
 
 #mercury-orbit {
