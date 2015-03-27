@@ -6,11 +6,14 @@ html, body, h1, h2, h3, h4, h5, li, ul, ol, input, select, div, p {
 
 html, body {
   font-size: 62.5%;
-  width: 100%;
-  height: 100%; }
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
 
 body {
-  background: url(images/space_background.jpg);
+  background: url(images/space_background.jpg) no-repeat fixed;
   background-size: 100% 100%;
   overflow: hidden; }
 
@@ -53,6 +56,9 @@ body {
   top: 0;
   left: 0;
   padding: 10px; }
+  @media screen and (max-width: 600px) {
+    .header {
+      padding: 0; } }
   .header h2 {
     color: #fff;
     font-size: 2em; }
@@ -64,16 +70,28 @@ body {
   bottom: 0;
   left: 0;
   padding: 10px; }
+  @media screen and (max-width: 600px) {
+    .footer {
+      padding: 0; } }
   .footer p {
     color: #fff;
     font-size: 2em; }
+
+#container {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
 
 #info-window {
   overflow: auto;
   position: relative;
   display: none;
   width: 900px;
-  margin: 50px auto;
+  max-height: 80%;
+  margin: 30px auto;
   background: #000;
   border-radius: 50px;
   padding: 40px;
@@ -83,9 +101,10 @@ body {
   -webkit-animation-fill-mode: forwards; }
   @media screen and (max-width: 1000px) {
     #info-window {
-      border-radius: 10px;
+      overflow: auto;
+      border-radius: 0;
       width: 90%;
-      height: 80%;
+      bottom: 0;
       margin: 30px auto;
       padding: 10px; } }
   #info-window #current-planet {
