@@ -69,7 +69,7 @@ $(document).ready(function(){
 
 
 	$('#info-window').click(function(){
-			$('#info-window').fadeOut(1000);
+			$('#info-window').scrollTop(0).fadeOut(1000);
 	})
 
 });
