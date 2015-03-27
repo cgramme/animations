@@ -3,47 +3,62 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=0.7, user-scalable=0" />
         <link rel="stylesheet" href="main.css" />
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Raleway:400,300,700'rel='stylesheet' type='text/css'>
     </head>
     
     <body>
         <!-- Right below is an image of the sun -->
         <div id="sun"></div>
         
-        <div id="mercury-orbit">
-        <div id="planet"></div>
+        <div class="not-clickable" id="mercury-orbit">
+        <div class="clickable" id="planet"></div>
         </div>
-        <div id="venus-orbit">
-        <div id="planet"></div>
+        <div class="not-clickable" id="venus-orbit">
+        <div class="clickable" id="planet"></div>
         </div>
-        <div id="earth-orbit">
-        <div id="planet"><div class="moon-orbit"><div class="moon"></div></div></div>
+        <div class="not-clickable" id="earth-orbit">
+        <div class="clickable" id="planet"><div class="moon-orbit"><div class="moon"></div></div></div>
         </div>
-        <div id="mars-orbit">
-        <div id="planet"></div>
+        <div class="not-clickable" id="mars-orbit">
+        <div class="clickable" id="planet"></div>
         </div>
-        <div id="jupiter-orbit">
-        <div id="planet"><div class="moon-orbit"><div class="moon"></div></div></div>
+        <div class="not-clickable" id="jupiter-orbit">
+        <div class="clickable" id="planet"><div class="moon-orbit"><div class="moon"></div></div></div>
         </div>
-        <div id="saturn-orbit">
-        <div id="planet"></div>
+        <div class="not-clickable" id="saturn-orbit">
+        <div class="clickable" id="planet"></div>
         </div>
-        <div id="uranus-orbit">
-        <div id="planet"></div>
+        <div class="not-clickable" id="uranus-orbit">
+        <div class="clickable" id="planet"></div>
         </div>
-        <div id="neptune-orbit">
-        <div id="planet"></div>
+        <div class="not-clickable" id="neptune-orbit">
+        <div class="clickable" id="planet"></div>
         </div>
-        <div id="rocket-orbit">
-        <div id="rocket-icon"></div>
+        <div class="not-clickable" id="rocket-orbit">
+        <div class="clickable" id="rocket-icon"></div>
         </div>
-        <div id="comet-orbit">
-        <div id="comet"></div>
+        <div class="not-clickable" id="comet-orbit">
+        <div class="clickable" id="comet"></div>
         </div>
-        <div id="comet2-orbit">
-        <div id="comet2"></div>
+        <div class="not-clickable" id="comet2-orbit">
+        <div class="clickable" id="comet2"></div>
         </div>
-        
-        
-        
+
+        <div id="info-window">
+            <div id="current-planet"></div>
+            <p class="name"></p>
+            <p class="description"></p>
+            <h4>Resources: Wikipedia</h4>
+            <h2>Click to exit</h2>
+        </div>
+        <div class="header">
+             <h2>Interactive Solar System Display</h2>
+        </div>
+        <div class="footer">
+            <p class="left">Created by Chris Gramme</p>
+            <p class="right">Contact</p>
+        </div>
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js" type='text/javascript'></script>
+        <script type='text/javascript' src='script.js'></script>
     </body>
 </html>

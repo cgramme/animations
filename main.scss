@@ -1,8 +1,17 @@
+html, body, h1, h2, h3, h4, h5, li, ul, ol, input, select, div, p{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-family: "Raleway","Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+    
+}
 html, body {
-    /* The universe takes up all available space */
+    
+    font-size: 62.5%;
     width: 100%;
     height: 100%;
 }
+
 body {
   background: url(images/space_background.jpg);
   background-size: 100% 100%;
@@ -29,13 +38,146 @@ body {
   to{opacity: 1;
    background-position: -160px 0;}
 }
-
 @keyframes rocket {
   from{opacity: 1;
    background-position: 0 0;}
   to{opacity: 1;
    background-position: -160px 0;}
 }
+
+//animation for information popup below
+
+@-webkit-keyframes informationIn {
+   from{display: block;
+   transform: scale(0.01);
+}
+   to{display: block;
+   transform: scale(1);}
+}
+
+@keyframes informationIn {
+  from{}
+  to{}
+}
+
+.earth {
+    display: block;
+    position: relative;
+    background-size: 100% 100%;
+}
+.zoom-animation {
+    display: block;
+    -webkit-animation-name: informationIn;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+}
+
+
+.header {
+    width: 100%;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    h2 {
+        color: #fff;
+        font-size: 2em;
+    }
+}
+.footer {
+    width: 100%;
+    background: #000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    p {
+        color: #fff;
+        font-size: 2em;
+    }
+}
+
+
+#info-window {
+    overflow: auto;
+    position: relative;
+    display: none;
+    width: 900px;
+    margin: 50px auto;
+    background: #000;
+    border-radius: 50px;
+    padding: 40px;
+    box-shadow: 0 0 50px -10px #fff;
+    -webkit-animation-name: informationIn;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-fill-mode: forwards;
+    @media screen and (max-width: 1000px) {
+            border-radius: 10px;
+            width: 90%;
+            height:80%;
+            margin: 30px auto;
+            padding: 10px;
+        }
+    #current-planet {
+        height: 200px;
+        width: 200px;
+        float: left;
+        margin-right: 50px;
+        @media screen and (max-width: 590px) {
+            float: none;
+            margin: 0 auto;
+        }
+    }
+    .name {
+        color: #777;
+        font-size: 15em;
+        margin-top: 50px;
+        text-align: center;
+        padding-right: 250px;
+        text-shadow: 5px 5px 10px #222;
+        font-weight: 100;
+        font-family: "raleway","Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+        @media screen and (max-width: 1000px) {
+            margin-top: 10px;
+            padding: 10px;
+            float: left;
+            clear: left;
+        }
+        @media screen and (max-width: 600px) {
+            font-size: 8em;
+        }
+    }
+    .description {
+        text-indent: 3em;
+        padding-top: 10px;
+        font-weight: normal;
+        font-style: normal;
+        font-family: "raleway","Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+        color: #fff;
+        font-size: 3em;
+        float: left;
+        clear: left;
+        @media screen and (max-width: 600px) {
+            font-size: 2em;
+        }
+    }
+    h4 {
+        padding-top: 20px;
+        display: block;
+        color: #fff;
+        font-size: 2.5em;
+        clear: left;
+    }
+    h2 {
+        position: relative;
+        text-align: center;
+        color: #fff;
+        font-size: 4em;
+        cursor: pointer;
+    }
+}
+
 
 
 #sun {
@@ -50,6 +192,7 @@ body {
     @include planetGradient(circle, #FFFEB3 20%, #FFFC38 50%, #FFCE47 70%);
     box-shadow: 0 0 200px 10px #ff0, 0 0 50px 10px #ff9500;
     overflow: visible;
+    cursor: pointer;
 }
 
 #mercury-orbit {
@@ -63,6 +206,7 @@ body {
     border-radius: 50%;
     @include rotateAnimation(spin-right 5s linear infinite);
      #planet {
+        z-index: 2;
         position: absolute;
         top: 100%;
         left: 50%;
@@ -73,6 +217,7 @@ body {
         margin-left: -10px;
         margin-top: -10px;
         box-shadow: inset 0 -20px 20px -10px #000, inset 0 10px 10px -5px #f00;
+        cursor: pointer;
      }
 }
 #venus-orbit {
@@ -96,6 +241,7 @@ body {
         margin-left: -12.5px;
         margin-top: -12.5px;
         box-shadow: 0 0 10px #fff, inset -30px 0px 30px -20px #000, inset 20px 0px 20px -10px #FF6A00;
+        cursor: pointer;
      }
 }
 #earth-orbit {
@@ -119,6 +265,7 @@ body {
         margin-left: -20px;
         margin-top: -20px;
         box-shadow: 0 0 20px #fff, inset 50px 0px 50px -35px #000, inset -50px 0px 50px -50px #96F8FF;
+        cursor: pointer;
 
         .moon-orbit {
             position: relative;
@@ -167,6 +314,7 @@ body {
         margin-left: -15px;
         margin-top: -15px;
         box-shadow: 0 0 10px #fff, inset 50px 0px 50px -40px #000, inset -30px 0px 30px -20px #FFBC5E;
+        cursor: pointer;
      }
 }
 #jupiter-orbit {
@@ -190,6 +338,7 @@ body {
         margin-left: -35px;
         margin-top: -35px;
         box-shadow: 0 0 30px #fff, inset 0px -60px 60px -30px #000, inset 0px 40px 40px -30px #FFD4B5;
+        cursor: pointer;
 
         .moon-orbit {
             position: relative;
@@ -241,6 +390,7 @@ body {
         margin-left: -40px;
         margin-top: -40px;
         box-shadow: inset 0px 50px 50px -30px #000;
+        cursor: pointer;
      }
 }
 #uranus-orbit {
@@ -265,6 +415,7 @@ body {
         margin-left: -25px;
         margin-top: -25px;
         box-shadow: 0 0 20px #fff, inset 0px 50px 50px -30px #000, inset 0 -50px 50px -30px #96FFF5;
+        cursor: pointer;
      }
 }
 #neptune-orbit {
@@ -289,6 +440,7 @@ body {
         margin-left: -25px;
         margin-top: -25px;
         box-shadow: 0 0 30px #fff, inset 0px 50px 50px -30px #000, inset 0 -50px 50px -30px #96B8FF;
+        cursor: pointer;
      }
 }
 #rocket-orbit {
@@ -392,3 +544,17 @@ body {
             transform: rotate(360deg);
   }
 }
+
+.not-clickable {
+    pointer-events: none;
+}
+.clickable {
+    pointer-events: auto;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
