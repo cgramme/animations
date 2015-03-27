@@ -101,7 +101,7 @@ body {
   -webkit-animation-fill-mode: forwards; }
   @media screen and (max-width: 1000px) {
     #info-window {
-      overflow: auto;
+      overflow-Y: scroll;
       border-radius: 0;
       width: 90%;
       bottom: 0;
@@ -146,7 +146,7 @@ body {
     clear: left; }
     @media screen and (max-width: 600px) {
       #info-window .description {
-        font-size: 2em; } }
+        font-size: 2.3em; } }
   #info-window h4 {
     padding-top: 20px;
     display: block;
