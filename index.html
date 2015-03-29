@@ -8,30 +8,30 @@
     
     <body>
         <div id="container">
-            <div id="sun"></div>
+            <div class="the-sun" id="sun"></div>
             <div class="not-clickable" id="mercury-orbit">
-            <div class="clickable" id="planet"></div>
+            <div class="clickable planet-mercury" id="planet"></div>
             </div>
             <div class="not-clickable" id="venus-orbit">
-            <div class="clickable" id="planet"></div>
+            <div class="clickable planet-venus" id="planet"></div>
             </div>
             <div class="not-clickable" id="earth-orbit">
-            <div class="clickable" id="planet"><div class="moon-orbit"><div class="moon"></div></div></div>
+            <div class="clickable planet-earth" id="planet"><div class="moon-orbit"><div class="moon"></div></div></div>
             </div>
             <div class="not-clickable" id="mars-orbit">
-            <div class="clickable" id="planet"></div>
+            <div class="clickable planet-mars" id="planet"></div>
             </div>
             <div class="not-clickable" id="jupiter-orbit">
-            <div class="clickable" id="planet"><div class="moon-orbit"><div class="moon"></div></div></div>
+            <div class="clickable planet-jupiter" id="planet"><div class="moon-orbit"><div class="moon"></div></div></div>
             </div>
             <div class="not-clickable" id="saturn-orbit">
-            <div class="clickable" id="planet"></div>
+            <div class="clickable planet-saturn" id="planet"></div>
             </div>
             <div class="not-clickable" id="uranus-orbit">
-            <div class="clickable" id="planet"></div>
+            <div class="clickable planet-uranus" id="planet"></div>
             </div>
             <div class="not-clickable" id="neptune-orbit">
-            <div class="clickable" id="planet"></div>
+            <div class="clickable planet-neptune" id="planet"></div>
             </div>
             <div class="not-clickable" id="rocket-orbit">
             <div class="clickable" id="rocket-icon"></div>
@@ -43,6 +43,29 @@
             <div class="clickable" id="comet2"></div>
             </div>
         </div>
+        <div class="header">
+             <h2>Interactive Solar System Display</h2>
+             <div><p class="blue-hover">_<br>_<br>_</p></div>
+             <h2 class="right blue-hover">Planet Menu</h2>
+        </div>
+        <div class="footer">
+            <p class="left">Created by Chris Gramme</p>
+            <p class="right">Contact</p>
+        </div>
+        <div class="list">
+            <ul>
+                <li class="click-here"><p>Select</p><img src="images/clickhere.png" alt="select a planet"></li></li>
+                <li class="the-sun"><p>The Sun</p><img src="images/sun.png" alt="the sun"></li>
+                <li class="planet-mercury"><p>Mercury</p><img src="images/mercury.png" alt="Mercury"></li>
+                <li class="planet-venus"><p>Venus</p><img src="images/venus.png" alt="Venus"></li>
+                <li class="planet-earth"><p>Earth</p><img src="images/earth.png" alt="Earth"></li>
+                <li class="planet-mars"><p>Mars</p><img src="images/mars.png" alt="Mars"></li>
+                <li class="planet-jupiter"><p>Jupiter</p><img src="images/jupiter.png" alt="Jupiter"></li>
+                <li class="planet-saturn"><p>Saturn</p><img src="images/saturn.png" alt="Saturn"></li>
+                <li class="planet-uranus"><p>Uranus</p><img src="images/uranus.png" alt="Uranus"></li>
+                <li class="planet-neptune"><p>Neptune</p><img src="images/neptune.png" alt="Neptune"></li>
+            </ul>
+        </div>
         <div id="info-window">
             <div id="current-planet"></div>
             <p class="name"></p>
@@ -50,13 +73,7 @@
             <h4>Resources: Wikipedia</h4>
             <h2>Click to exit</h2>
         </div>
-        <div class="header">
-             <h2>Interactive Solar System Display</h2>
-        </div>
-        <div class="footer">
-            <p class="left">Created by Chris Gramme</p>
-            <p class="right">Contact</p>
-        </div>
+        <img class="zoom-control" src="images/zoom_in.png">
         <script src="http://code.jquery.com/jquery-1.10.1.min.js" type='text/javascript'></script>
         <script type='text/javascript' src='script.js'></script>
     </body>
