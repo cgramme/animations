@@ -160,6 +160,9 @@ body {
   -webkit-animation-name: informationIn;
   -webkit-animation-duration: 2s;
   -webkit-animation-fill-mode: forwards; }
+  #info-window:hover h2 {
+    color: #0ff;
+    text-shadow: 0 0 10px #00FFDD; }
   @media screen and (max-width: 1000px) {
     #info-window {
       overflow-Y: scroll;
@@ -356,6 +359,16 @@ body {
         background: -moz-radial-gradient(circle, #444 60%, #222 65%);
         background: radial-gradient(circle, #444 60%, #222 65%);
         border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        margin-left: -7.5px;
+        margin-top: -7.5px; }
+      #earth-orbit #planet .moon-orbit .satellite {
+        background: url(images/satellite.png);
+        background-size: 100% 100%;
+        position: relative;
+        top: 60px;
+        left: 40px;
         height: 15px;
         width: 15px;
         margin-left: -7.5px;

@@ -207,6 +207,10 @@ body {
     -webkit-animation-name: informationIn;
     -webkit-animation-duration: 2s;
     -webkit-animation-fill-mode: forwards;
+    &:hover h2 {
+        color: #0ff;
+        text-shadow: 0 0 10px #00FFDD;
+    }
     @media screen and (max-width: 1000px) {
             overflow-Y: scroll;
             border-radius: 0;
@@ -387,6 +391,18 @@ body {
                 left: 50%;
                 @include planetGradient(circle, #444 60%, #222 65%);
                 border-radius: 50%;
+                height: 15px;
+                width: 15px;
+                margin-left: -7.5px;
+                margin-top: -7.5px;
+                
+             }
+             .satellite {
+                background: url(images/satellite.png);
+                background-size: 100% 100%;
+                position: relative;
+                top: 60px;
+                left: 40px;
                 height: 15px;
                 width: 15px;
                 margin-left: -7.5px;
