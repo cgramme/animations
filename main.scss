@@ -21,7 +21,6 @@ body {
 }
 
 @mixin rotateAnimation ($params) {
-
     -webkit-animation: $params;
     -moz-animation: $params;
     -ms-animation: $params;
@@ -48,7 +47,6 @@ body {
 }
 
 //animation for information popup below
-
 @-webkit-keyframes informationIn {
    from{display: block;
    transform: scale(0.01);
@@ -60,6 +58,13 @@ body {
 @keyframes informationIn {
   from{}
   to{}
+}
+
+// animation planet zoom on hover below
+@-webkit-keyframes planetZoom {
+   from{transform: scale(1);
+}
+   to{transform: scale(1.5);}
 }
 
 .earth {
@@ -107,6 +112,10 @@ body {
             padding: 10px;
             display: inline-block;
             cursor: pointer;
+            &:hover p {
+                color: #0ff;
+                text-shadow: 0 0 10px #00FFDD;
+            }
         }
     }
     
@@ -157,6 +166,10 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
+    &:hover p {
+                color: #0ff;
+                text-shadow: 0 0 10px #00FFDD;
+            }
     @media screen and (max-width: 600px) {
            height: 18px;
         }
@@ -276,6 +289,14 @@ body {
     box-shadow: 0 0 200px 10px #ff0, 0 0 50px 10px #ff9500;
     overflow: visible;
     cursor: pointer;
+}
+
+#planet {
+    &:hover {
+        -webkit-animation-name: planetZoom;
+        -webkit-animation-duration: 0.5s;
+        -webkit-animation-fill-mode: forwards;
+    }
 }
 
 #mercury-orbit {

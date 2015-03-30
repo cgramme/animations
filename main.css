@@ -38,6 +38,11 @@ body {
   to {
     display: block;
     transform: scale(1); } }
+@-webkit-keyframes planetZoom {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.5); } }
 .earth {
   display: block;
   position: relative;
@@ -79,6 +84,9 @@ body {
       padding: 10px;
       display: inline-block;
       cursor: pointer; }
+      .list ul li:hover p {
+        color: #0ff;
+        text-shadow: 0 0 10px #00FFDD; }
 
 .header {
   width: 100%;
@@ -116,6 +124,9 @@ body {
   bottom: 0;
   left: 0;
   right: 0; }
+  .footer:hover p {
+    color: #0ff;
+    text-shadow: 0 0 10px #00FFDD; }
   @media screen and (max-width: 600px) {
     .footer {
       height: 18px; } }
@@ -226,6 +237,11 @@ body {
   box-shadow: 0 0 200px 10px #ff0, 0 0 50px 10px #ff9500;
   overflow: visible;
   cursor: pointer; }
+
+#planet:hover {
+  -webkit-animation-name: planetZoom;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards; }
 
 #mercury-orbit {
   position: absolute;
