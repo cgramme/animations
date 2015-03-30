@@ -121,6 +121,19 @@ body {
     
 }
 
+.interactive-text {
+    text-align: center;
+    display: block;
+    color: #fff;
+    font-size: 6em;
+    margin: 200px auto;
+    white-space: nowrap;
+    right: 0;
+    @media screen and (max-width: 600px) {
+            font-size: 3em;
+        }
+}
+
 
 .header {
     width: 100%;
@@ -184,6 +197,7 @@ body {
 }
 
 #container {
+    display: none;
     overflow: hidden;
     position: absolute;
     top: 0;

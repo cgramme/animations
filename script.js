@@ -93,7 +93,20 @@ $(document).ready(function(){
         
     });
 
+    $('#container').animate({ 'zoom': 0.01 }, 0);
+    $('.interactive-text').animate({ 'zoom': 0.01 }, 0);
+
+    startSystem();
+
 });
+
+function startSystem(){
+	$('.interactive-text').css({'display':'block'}).animate({ 'zoom': 1 }, 2000);
+	$('#container').delay(4000).css({'display':'block'}).animate({ 'zoom': 1 }, 7000);
+	$('.interactive-text').delay(1000).animate({ 'zoom': 10 }, 2000, function(){
+		$('.interactive-text').css({'display':'none'});
+	});
+}
 
 window.onresize = function(event) {
 };
