@@ -96,7 +96,7 @@ $(document).ready(function(){
     $('#container').animate({ 'zoom': 0.01 }, 0);
     $('.interactive-text').animate({ 'zoom': 0.01 }, 0);
 
-    startSystem();
+    
 
 });
 
@@ -110,4 +110,8 @@ function startSystem(){
 
 window.onresize = function(event) {
 };
+
+$(window).load(function(){
+	startSystem();
+});
 
