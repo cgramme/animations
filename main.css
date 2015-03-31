@@ -23,14 +23,14 @@ body {
     background-position: 0 0; }
   to {
     opacity: 1;
-    background-position: -160px 0; } }
+    background-position: -90px 0; } }
 @keyframes rocket {
   from {
     opacity: 1;
     background-position: 0 0; }
   to {
     opacity: 1;
-    background-position: -160px 0; } }
+    background-position: -90px 0; } }
 @-webkit-keyframes informationIn {
   from {
     display: block;
@@ -38,7 +38,19 @@ body {
   to {
     display: block;
     transform: scale(1); } }
+@keyframes informationIn {
+  from {
+    display: block;
+    transform: scale(0.01); }
+  to {
+    display: block;
+    transform: scale(1); } }
 @-webkit-keyframes planetZoom {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.5); } }
+@keyframes planetZoom {
   from {
     transform: scale(1); }
   to {
@@ -88,7 +100,7 @@ body {
         color: #0ff;
         text-shadow: 0 0 10px #00FFDD; }
 
-.interactive-text {
+p.interactive-text {
   text-align: center;
   display: block;
   color: #fff;
@@ -97,8 +109,18 @@ body {
   white-space: nowrap;
   right: 0; }
   @media screen and (max-width: 600px) {
-    .interactive-text {
+    p.interactive-text {
       font-size: 3em; } }
+
+p.instructions {
+  display: none;
+  text-align: center;
+  color: #fff;
+  font-size: 4em;
+  margin: 50px auto; }
+  @media screen and (max-width: 600px) {
+    p.instructions {
+      font-size: 2em; } }
 
 .header {
   width: 100%;
@@ -135,7 +157,8 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
-  right: 0; }
+  right: 0;
+  cursor: pointer; }
   .footer:hover p {
     color: #0ff;
     text-shadow: 0 0 10px #00FFDD; }
@@ -151,7 +174,6 @@ body {
         margin: 0; } }
 
 #container {
-  display: none;
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -358,11 +380,11 @@ body {
       margin-top: -37px;
       margin-left: -37px;
       border-radius: 50%;
-      -webkit-animation: spin-right 5s linear infinite;
-      -moz-animation: spin-right 5s linear infinite;
-      -ms-animation: spin-right 5s linear infinite;
-      -o-animation: spin-right 5s linear infinite;
-      animation: spin-right 5s linear infinite; }
+      -webkit-animation: spin-right 13s linear infinite;
+      -moz-animation: spin-right 13s linear infinite;
+      -ms-animation: spin-right 13s linear infinite;
+      -o-animation: spin-right 13s linear infinite;
+      animation: spin-right 13s linear infinite; }
       #earth-orbit #planet .moon-orbit .moon {
         position: relative;
         top: 0;
@@ -382,10 +404,10 @@ body {
         position: relative;
         top: 60px;
         left: 40px;
-        height: 15px;
-        width: 15px;
-        margin-left: -7.5px;
-        margin-top: -7.5px; }
+        height: 10px;
+        width: 10px;
+        margin-left: -5px;
+        margin-top: -5px; }
 
 #mars-orbit {
   position: absolute;
@@ -586,12 +608,22 @@ body {
     margin-left: -10px;
     margin-top: -2px;
     transform: rotate(90deg);
-    background: url("images/rocket2.png");
-    -webkit-animation: rocket 1s steps(8) infinite 2s;
-    animation: rocket 1s steps(8) infinite;
+    background: url("images/fire_small.png");
+    -webkit-animation: rocket 0.6s steps(6) infinite 2s;
+    animation: rocket 0.6s steps(6) infinite;
     margin-right: 50px;
-    width: 20px;
-    height: 40px; }
+    width: 15px;
+    height: 30px; }
+  #rocket-orbit .capsule {
+    background: url("images/capsule.png");
+    background-size: 100% 100%;
+    position: absolute;
+    top: -10px;
+    left: 55%;
+    margin-left: -16px;
+    margin-top: -18px;
+    width: 30px;
+    height: 30px; }
 
 #comet-orbit {
   position: absolute;

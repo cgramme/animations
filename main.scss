@@ -33,17 +33,19 @@ body {
   background: -moz-radial-gradient($params);
   background: radial-gradient($params);
 }
+
+//spacecraft exhaust fire sprite below
 @-webkit-keyframes rocket {
   from{opacity: 1;
    background-position: 0 0;}
   to{opacity: 1;
-   background-position: -160px 0;}
+   background-position: -90px 0;}
 }
 @keyframes rocket {
   from{opacity: 1;
    background-position: 0 0;}
   to{opacity: 1;
-   background-position: -160px 0;}
+   background-position: -90px 0;}
 }
 
 //animation for information popup below
@@ -56,12 +58,20 @@ body {
 }
 
 @keyframes informationIn {
-  from{}
-  to{}
+ from{display: block;
+   transform: scale(0.01);
+}
+   to{display: block;
+   transform: scale(1);}
 }
 
 // animation planet zoom on hover below
 @-webkit-keyframes planetZoom {
+   from{transform: scale(1);
+}
+   to{transform: scale(1.5);}
+}
+@keyframes planetZoom {
    from{transform: scale(1);
 }
    to{transform: scale(1.5);}
@@ -121,7 +131,7 @@ body {
     
 }
 
-.interactive-text {
+p.interactive-text {
     text-align: center;
     display: block;
     color: #fff;
@@ -131,6 +141,17 @@ body {
     right: 0;
     @media screen and (max-width: 600px) {
             font-size: 3em;
+        }
+}
+
+p.instructions {
+    display: none;
+    text-align: center;
+    color: #fff;
+    font-size: 4em;
+    margin: 50px auto;
+    @media screen and (max-width: 600px) {
+            font-size: 2em;
         }
 }
 
@@ -179,6 +200,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
+    cursor: pointer;
     &:hover p {
                 color: #0ff;
                 text-shadow: 0 0 10px #00FFDD;
@@ -197,7 +219,6 @@ body {
 }
 
 #container {
-    display: none;
     overflow: hidden;
     position: absolute;
     top: 0;
@@ -398,7 +419,7 @@ body {
             margin-top: -37px;
             margin-left: -37px;
             border-radius: 50%;
-            @include rotateAnimation(spin-right 5s linear infinite);
+            @include rotateAnimation(spin-right 13s linear infinite);
              .moon {
                 position: relative;
                 top: 0;
@@ -417,10 +438,10 @@ body {
                 position: relative;
                 top: 60px;
                 left: 40px;
-                height: 15px;
-                width: 15px;
-                margin-left: -7.5px;
-                margin-top: -7.5px;
+                height: 10px;
+                width: 10px;
+                margin-left: -5px;
+                margin-top: -5px;
                 
              }
         }
@@ -595,12 +616,23 @@ body {
         margin-left: -10px;
         margin-top: -2px;
         transform: rotate(90deg);
-        background: url('images/rocket2.png');
-        -webkit-animation: rocket 1s steps(8) infinite 2s;
-        animation: rocket 1s steps(8) infinite;
+        background: url('images/fire_small.png');
+        -webkit-animation: rocket 0.6s steps(6) infinite 2s;
+        animation: rocket 0.6s steps(6) infinite;
         margin-right: 50px;
-        width: 20px;
-        height: 40px;
+        width: 15px;
+        height: 30px;
+     }
+     .capsule {
+        background: url('images/capsule.png');
+        background-size: 100% 100%;
+        position: absolute;
+        top: -10px;
+        left: 55%;
+        margin-left: -16px;
+        margin-top: -18px;
+        width: 30px;
+        height: 30px;
      }
 }
 #comet-orbit {
