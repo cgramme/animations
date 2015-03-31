@@ -139,6 +139,7 @@ p.interactive-text {
     margin: 200px auto;
     white-space: nowrap;
     right: 0;
+    text-shadow: 0 0 10px #000;
     @media screen and (max-width: 600px) {
             font-size: 3em;
         }
@@ -150,6 +151,7 @@ p.instructions {
     color: #fff;
     font-size: 4em;
     margin: 50px auto;
+    text-shadow: 0 0 10px #000;
     @media screen and (max-width: 600px) {
             font-size: 2em;
         }
