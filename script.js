@@ -84,17 +84,17 @@ $(document).ready(function(){
 	$('.zoom-control').click(
     function() {
     	if($zoom === 0){
-    		$('#container').transition({ scale: 0.4 }, 1000);
+    		$('#container').animate({ 'zoom': 0.4 }, 1000);
     		$zoom = 1;
     	}else{
-    		$('#container').transition({ scale: 1 }, 1000);
+    		$('#container').animate({ 'zoom': 1 }, 1000);
     		$zoom = 0;
     	}
         
     });
 
-    $('#container').transition({ scale: 0.01 }, 0);
-    $('.interactive-text').transition({ scale: 0.01 }, 0);
+    $('#container').animate({ 'zoom': 0.01 }, 0);
+    $('.interactive-text').animate({ 'zoom': 0.01 }, 0);
 
     windowWidth = $(window).width();
 
@@ -102,14 +102,16 @@ $(document).ready(function(){
 
 function startSystem(){
 	if(windowWidth < 1000){
-		$('.interactive-text').hide().transition({ scale: 1 }, 0).fadeIn(2000).delay(1000).fadeOut();
-		$('#container').hide().transition({ scale: 1 }, 0).delay(3000).fadeIn(2000);
+		$('.interactive-text').hide().animate({ 'zoom': 1 }, 0).fadeIn(2000).delay(1000).fadeOut();
+		$('#container').hide().animate({ 'zoom': 1 }, 0).delay(3000).fadeIn(2000);
 		$('.instructions').delay(5000).fadeIn(2000).delay(2000).fadeOut(1000);
 	}else{
-		$('.interactive-text').transition({ scale: 1.1 }, 2000);
-		$('#container').delay(3000).transition({ scale: 1 }, 7000);
-		$('.interactive-text').delay(1000).fadeOut(1000);
+		$('.interactive-text').animate({ 'zoom': 1 }, 2000);
+		$('#container').delay(3000).animate({ 'zoom': 1 }, 7000);
+		$('.interactive-text').delay(1000).animate({ 'zoom': 10 }, 2000, function(){
+		$('.interactive-text').hide();
 		$('.instructions').delay(5000).fadeIn(2000).delay(2000).fadeOut(1000);
+	});
 	}
 }
 
