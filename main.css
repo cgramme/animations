@@ -277,6 +277,9 @@ p.instructions {
   box-shadow: 0 0 200px 10px #ff0, 0 0 50px 10px #ff9500;
   overflow: visible;
   cursor: pointer; }
+  @media screen and (max-width: 600px) {
+    #sun {
+      box-shadow: 0 0 80px 10px #ff0, 0 0 20px 10px #ff9500; } }
 
 #planet:hover {
   -webkit-animation-name: planetZoom;
