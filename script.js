@@ -101,13 +101,14 @@ $(document).ready(function(){
 });
 
 function startSystem(){
+	$('#container, .interactive-text').css({'display': 'block'});
 	if(windowWidth < 1000){
 		$('.interactive-text').hide().animate({ 'zoom': 1 }, 0).fadeIn(2000).delay(1000).fadeOut();
 		$('#container').hide().animate({ 'zoom': 1 }, 0).delay(3000).fadeIn(2000);
 		$('.instructions').delay(5000).fadeIn(2000).delay(2000).fadeOut(1000);
 	}else{
 		$('.interactive-text').animate({ 'zoom': 1 }, 2000);
-		$('#container').delay(3000).animate({ 'zoom': 1 }, 7000);
+		$('#container').delay(3000).animate({ 'zoom': 1 }, 5000);
 		$('.interactive-text').delay(1000).animate({ 'zoom': 10 }, 2000, function(){
 		$('.interactive-text').hide();
 		$('.instructions').delay(5000).fadeIn(2000).delay(2000).fadeOut(1000);

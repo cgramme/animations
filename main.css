@@ -80,8 +80,8 @@ body {
 .list {
   display: none;
   position: absolute;
-  top: 30px;
-  left: 0; }
+  right: 0;
+  top: 30px; }
   .list p {
     font-size: 2em;
     color: #fff; }
@@ -102,7 +102,7 @@ body {
 
 p.interactive-text {
   text-align: center;
-  display: block;
+  display: none;
   color: #fff;
   font-size: 6em;
   margin: 200px auto;
@@ -178,6 +178,7 @@ p.instructions {
 #container {
   overflow: hidden;
   position: absolute;
+  display: none;
   top: 0;
   bottom: 0;
   left: 0;
