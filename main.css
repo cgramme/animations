@@ -185,7 +185,7 @@ p.instructions {
   right: 0; }
 
 #info-window {
-  overflow: auto;
+  overflow: scroll;
   position: relative;
   display: none;
   width: 900px;
@@ -601,11 +601,11 @@ p.instructions {
   margin-top: -180px;
   margin-left: -860px;
   border-radius: 50%;
-  -webkit-animation: spin-right 17s linear 2s infinite;
-  -moz-animation: spin-right 17s linear 2s infinite;
-  -ms-animation: spin-right 17s linear 2s infinite;
-  -o-animation: spin-right 17s linear 2s infinite;
-  animation: spin-right 17s linear 2s infinite; }
+  -webkit-animation: spin-right 17s linear infinite;
+  -moz-animation: spin-right 17s linear infinite;
+  -ms-animation: spin-right 17s linear infinite;
+  -o-animation: spin-right 17s linear infinite;
+  animation: spin-right 17s linear infinite; }
   #rocket-orbit #rocket-icon {
     opacity: 0;
     position: absolute;
@@ -714,5 +714,23 @@ p.instructions {
 
 .right {
   float: right; }
+
+::-webkit-scrollbar {
+  -webkit-appearance: none; }
+
+::-webkit-scrollbar:vertical {
+  width: 12px; }
+
+::-webkit-scrollbar:horizontal {
+  height: 12px; }
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  border: 2px solid #ffffff; }
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #ffffff; }
 
 /*# sourceMappingURL=main.css.map */
